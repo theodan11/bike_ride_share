@@ -1,6 +1,8 @@
+import 'package:bike_ride_ui/core/common/card_with_image.dart';
 import 'package:bike_ride_ui/core/common/header_and_view_all.dart';
 import 'package:bike_ride_ui/core/common/my_appbar_icons.dart';
 import 'package:bike_ride_ui/core/common/nearby_users.dart';
+import 'package:bike_ride_ui/core/constant/color_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:bike_ride_ui/core/theme/my_inter_font.dart';
 
@@ -42,6 +44,7 @@ class HomePage extends StatelessWidget {
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const SizedBox(
                 height: 20,
@@ -58,71 +61,37 @@ class HomePage extends StatelessWidget {
               const SizedBox(
                 height: 15,
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16),
-                child: Row(
-                  children: [
-                    GestureDetector(
-                      onTap: () {
-                        print("Racing page pressed");
-                      },
-                      child: SizedBox(
-                        // width: MediaQuery.of(context).size.width / 2 - (46 / 2),
-                        width: 178,
-                        // height: 196,
-                        child: Column(
-                          children: [
-                            Container(
-                              decoration: BoxDecoration(
-                                border: Border.all(
-                                  width: 1,
-                                  color:
-                                      const Color.fromARGB(255, 191, 189, 189),
-                                ),
-                                borderRadius: const BorderRadius.all(
-                                  Radius.circular(4),
-                                ),
-                              ),
-                              child: Image.asset(
-                                'assets/images/deals_of_the_day_01.png',
-                                height: 110,
-                              ),
-                            ),
-                            const SizedBox(
-                              height: 15,
-                            ),
-                            Text(
-                              "Racing Dual Visor Helmet",
-                              style: MyInterFont.interMedium14,
-                            ),
-                            Row(
-                              children: [
-                                Text(
-                                  "₹ 4,079",
-                                  style: MyInterFont.interSemiBold16
-                                      .copyWith(color: Colors.black),
-                                ),
-                                const SizedBox(
-                                  width: 6,
-                                ),
-                                Text(
-                                  "₹ 5,099",
-                                  style: MyInterFont.interMediumLineThrough12,
-                                ),
-                                const SizedBox(
-                                  width: 6,
-                                ),
-                                Text(
-                                  "20% Off",
-                                  style: MyInterFont.interRegularOffer12,
-                                ),
-                              ],
-                            )
-                          ],
-                        ),
+              ConstrainedBox(
+                constraints: const BoxConstraints(
+                  maxWidth: 500,
+                ),
+                child: Container(
+                  // width: 500,
+                  alignment: Alignment.centerLeft,
+                  padding: const EdgeInsets.symmetric(horizontal: 16),
+                  child: const Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      CardWithImage(
+                        imagePath: "assets/images/deals_of_the_day_01.png",
+                        titleText: "Racing Dual Visor Helmet",
+                        offerPrice: "₹ 4,079",
+                        originalPrice: "₹ 5,099",
+                        discount: 20,
+                        rating: 4.8,
+                        numberOfReviews: 212,
                       ),
-                    )
-                  ],
+                      CardWithImage(
+                        imagePath: "assets/images/deals_of_the_day_02.png",
+                        titleText: "Aerodynamic Helmet",
+                        offerPrice: "₹ 2,799",
+                        originalPrice: "₹ 3,499",
+                        discount: 20,
+                        rating: 4.8,
+                        numberOfReviews: 212,
+                      )
+                    ],
+                  ),
                 ),
               )
             ],
