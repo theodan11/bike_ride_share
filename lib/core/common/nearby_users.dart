@@ -29,30 +29,35 @@ class NearbyUsers extends StatelessWidget {
               // print(MediaQuery.of(context).size.width / (82 / 6) - 82);
               return Padding(
                 padding: const EdgeInsets.only(right: 10.0),
-                child: Column(
-                  children: [
-                    ClipOval(
-                      child: ConstrainedBox(
-                        constraints:
-                            const BoxConstraints(maxHeight: 120, maxWidth: 120),
-                        child: Image.asset(
-                          user["image"]!,
-                          width:
-                              MediaQuery.of(context).size.width / 5 - (82 / 5),
-                          height:
-                              MediaQuery.of(context).size.width / 5 - (82 / 5),
-                          fit: BoxFit.cover,
+                child: GestureDetector(
+                  onTap: () {
+                    print("clicked on ${user["name"]}");
+                  },
+                  child: Column(
+                    children: [
+                      ClipOval(
+                        child: ConstrainedBox(
+                          constraints: const BoxConstraints(
+                              maxHeight: 120, maxWidth: 120),
+                          child: Image.asset(
+                            user["image"]!,
+                            width: MediaQuery.of(context).size.width / 5 -
+                                (82 / 5),
+                            height: MediaQuery.of(context).size.width / 5 -
+                                (82 / 5),
+                            fit: BoxFit.cover,
+                          ),
                         ),
                       ),
-                    ),
-                    const SizedBox(height: 5),
-                    Text(
-                      user["name"]!,
-                      style: MyInterFont.interRegular14.copyWith(
-                        color: const Color(0xFF666666),
-                      ),
-                    )
-                  ],
+                      const SizedBox(height: 5),
+                      Text(
+                        user["name"]!,
+                        style: MyInterFont.interRegular14.copyWith(
+                          color: const Color(0xFF666666),
+                        ),
+                      )
+                    ],
+                  ),
                 ),
               );
             },
