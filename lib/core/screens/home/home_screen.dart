@@ -1,3 +1,5 @@
+import 'package:bike_ride_ui/core/common/buy_service_container.dart';
+
 import 'package:bike_ride_ui/core/common/card_with_sname_list_builder.dart';
 import 'package:bike_ride_ui/core/common/header_and_view_all.dart';
 import 'package:bike_ride_ui/core/common/my_appbar_icons.dart';
@@ -8,7 +10,7 @@ import 'package:flutter/material.dart';
 import 'package:bike_ride_ui/core/theme/my_inter_font.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+  HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -80,8 +82,9 @@ class HomePage extends StatelessWidget {
               ),
               const HeaderAndViewAll(headerTitle: "Buy Service Packages"),
               const SizedBox(
-                height: 22,
+                height: 18,
               ),
+              BuyServiceContainer()
             ],
           ),
         ),

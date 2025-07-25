@@ -28,12 +28,12 @@ class CardWithImage extends StatelessWidget {
         print("Racing page pressed");
       },
       child: ConstrainedBox(
-        constraints: const BoxConstraints(maxWidth: 200),
+        constraints: const BoxConstraints(maxWidth: 180, maxHeight: 240),
         child: SizedBox(
           width: MediaQuery.of(context).size.width / 2 - (46 / 2),
           // width: 200,
 
-          // height: 196,
+          // height: 400,
           child: Column(
             children: [
               Container(
@@ -47,7 +47,7 @@ class CardWithImage extends StatelessWidget {
                   ),
                 ),
                 child: ConstrainedBox(
-                  constraints: const BoxConstraints(maxWidth: 200),
+                  constraints: const BoxConstraints(maxWidth: 224),
                   child: Image.asset(
                     imagePath,
                     height: 110,
@@ -57,7 +57,7 @@ class CardWithImage extends StatelessWidget {
                 ),
               ),
               const SizedBox(
-                height: 15,
+                height: 10,
               ),
               Align(
                 alignment: Alignment.centerLeft,
@@ -114,9 +114,9 @@ class CardWithImage extends StatelessWidget {
                         ),
                       ],
                     ),
-              const SizedBox(height: 15),
+              const SizedBox(height: 10),
               numberOfReviews > 0
-                  ? MediaQuery.of(context).size.width > 340
+                  ? MediaQuery.of(context).size.width > 375
                       ? Row(
                           children: [
                             Image.asset("assets/images/Frame 37.png"),
@@ -147,6 +147,7 @@ class CardWithImage extends StatelessWidget {
                         )
                   : const SizedBox(
                       width: 0,
+                      height: 0,
                     ),
             ],
           ),
