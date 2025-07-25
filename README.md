@@ -20,6 +20,6 @@ This project is a User Interface (UI) conversion of a Bike Ride Sharing applicat
 
 
 
-## Resources 
+<!-- ## Resources 
 
-&rarr; ![Figma Design]()
+&rarr; ![Figma Design]() -->
