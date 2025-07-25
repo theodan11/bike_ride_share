@@ -7,7 +7,7 @@ class CardWithSnameListBuilder extends StatelessWidget {
     {
       "placeName": "Shimla to Manali",
       "imagePath": "assets/images/up_e_01.png",
-      "numberOfUser": 20,
+      "numberOfUser": 12,
     },
     {
       "placeName": "Goa to Gujarat",

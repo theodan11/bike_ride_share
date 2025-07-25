@@ -9,21 +9,39 @@ class HeaderAndViewAll extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Text(
-            headerTitle,
-            style: MyInterFont.interSemiBold16.copyWith(color: Colors.black),
-          ),
-          GestureDetector(
-            onTap: () {
-              print("view all pressed");
-            },
-            child: Text("View all >", style: MyInterFont.interRegular14),
-          )
-        ],
-      ),
+      child: MediaQuery.of(context).size.width > 242
+          ? Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  headerTitle,
+                  style:
+                      MyInterFont.interSemiBold16.copyWith(color: Colors.black),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    print("view all pressed");
+                  },
+                  child: Text("View all >", style: MyInterFont.interRegular14),
+                )
+              ],
+            )
+          : Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  headerTitle,
+                  style:
+                      MyInterFont.interSemiBold16.copyWith(color: Colors.black),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    print("view all pressed");
+                  },
+                  child: Text("View all >", style: MyInterFont.interRegular14),
+                )
+              ],
+            ),
     );
   }
 }

@@ -1,10 +1,8 @@
-import 'package:bike_ride_ui/core/common/card_with_image.dart';
-import 'package:bike_ride_ui/core/common/card_with_sname.dart';
 import 'package:bike_ride_ui/core/common/card_with_sname_list_builder.dart';
 import 'package:bike_ride_ui/core/common/header_and_view_all.dart';
 import 'package:bike_ride_ui/core/common/my_appbar_icons.dart';
 import 'package:bike_ride_ui/core/common/nearby_users.dart';
-import 'package:bike_ride_ui/core/constant/color_constants.dart';
+
 import 'package:bike_ride_ui/core/screens/home/widgets/deals_of_day_home.dart';
 import 'package:flutter/material.dart';
 import 'package:bike_ride_ui/core/theme/my_inter_font.dart';
@@ -76,7 +74,14 @@ class HomePage extends StatelessWidget {
                 padding: const EdgeInsets.only(left: 16),
                 height: 200,
                 child: CardWithSnameListBuilder(),
-              )
+              ),
+              const SizedBox(
+                height: 22,
+              ),
+              const HeaderAndViewAll(headerTitle: "Buy Service Packages"),
+              const SizedBox(
+                height: 22,
+              ),
             ],
           ),
         ),

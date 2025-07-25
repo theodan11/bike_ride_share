@@ -17,77 +17,86 @@ class CardWithTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        print("pressed ${placeName}");
+      },
       child: Padding(
         padding: const EdgeInsets.only(right: 8.5),
         child: ConstrainedBox(
-          constraints: const BoxConstraints(maxWidth: 260, minWidth: 90),
-          child: Column(
-            children: [
-              Stack(
-                children: [
-                  CardImage(imagePath: imagepath),
-                  Positioned(
-                    left: 5,
-                    bottom: 5,
-                    child: ClipOval(
-                      child: Image.asset(
-                        'assets/images/Ellipse 40.png',
-                        width: 28,
-                        height: 28,
-                      ),
-                    ),
-                  ),
-                  Positioned(
-                    left: 22,
-                    bottom: 5,
-                    child: ClipOval(
-                      child: Image.asset(
-                        'assets/images/Ellipse 40.png',
-                        width: 28,
-                        height: 28,
-                      ),
-                    ),
-                  ),
-                  Positioned(
-                    left: 39,
-                    bottom: 5,
-                    child: ClipOval(
-                      child: Image.asset(
-                        'assets/images/Ellipse 40.png',
-                        width: 28,
-                        height: 28,
-                      ),
-                    ),
-                  ),
-                  Positioned(
-                    left: 56,
-                    bottom: 5,
-                    child: ClipOval(
-                      child: Container(
-                        width: 28,
-                        height: 28,
-                        decoration: const BoxDecoration(
-                          color: ColorConstants.primaryPurple,
+          constraints: const BoxConstraints(maxWidth: 210),
+          child: SizedBox(
+            // height: 110,
+
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Stack(
+                  children: [
+                    CardImage(imagePath: imagepath),
+                    Positioned(
+                      left: 5,
+                      bottom: 5,
+                      child: ClipOval(
+                        child: Image.asset(
+                          'assets/images/Ellipse 40.png',
+                          width: 28,
+                          height: 28,
                         ),
-                        child: Center(
-                          child: Text(
-                            "$numberOfUser+",
-                            style: MyInterFont.interRegularOffer12
-                                .copyWith(color: Colors.white),
+                      ),
+                    ),
+                    Positioned(
+                      left: 22,
+                      bottom: 5,
+                      child: ClipOval(
+                        child: Image.asset(
+                          'assets/images/Ellipse 41.png',
+                          width: 28,
+                          height: 28,
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                      left: 39,
+                      bottom: 5,
+                      child: ClipOval(
+                        child: Image.asset(
+                          'assets/images/Ellipse 49.png',
+                          width: 28,
+                          height: 28,
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                      left: 56,
+                      bottom: 5,
+                      child: ClipOval(
+                        child: Container(
+                          width: 28,
+                          height: 28,
+                          decoration: const BoxDecoration(
+                            color: ColorConstants.primaryPurple,
+                          ),
+                          child: Center(
+                            child: Text(
+                              "$numberOfUser+",
+                              style: MyInterFont.interRegularOffer12
+                                  .copyWith(color: Colors.white),
+                            ),
                           ),
                         ),
                       ),
                     ),
-                  ),
-                ],
-              ),
-              CardText(titleText: placeName),
-            ],
+                  ],
+                ),
+                Align(
+                  alignment: Alignment.center,
+                  child: CardText(titleText: placeName),
+                ),
+              ],
+            ),
           ),
         ),
       ),
     );
-    ;
   }
 }

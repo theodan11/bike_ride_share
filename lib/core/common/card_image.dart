@@ -7,10 +7,11 @@ class CardImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ConstrainedBox(
-      constraints: const BoxConstraints(maxWidth: 220),
+      constraints: const BoxConstraints(maxHeight: 140),
       child: Image.asset(
         imagePath,
-        width: MediaQuery.of(context).size.width / 3 - (32 / 3),
+        // height: 110,
+        width: MediaQuery.of(context).size.width,
       ),
     );
   }

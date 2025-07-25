@@ -16,6 +16,7 @@ class DealsOfDayHome extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 16),
         child: const Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             CardWithImage(
               imagePath: "assets/images/deals_of_the_day_01.png",
