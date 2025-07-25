@@ -73,7 +73,7 @@ class HomePage extends StatelessWidget {
               ),
               Container(
                 padding: const EdgeInsets.only(left: 16),
-                height: 140,
+                height: 200,
                 child: ListView.builder(
                   itemCount: 3,
                   scrollDirection: Axis.horizontal,
