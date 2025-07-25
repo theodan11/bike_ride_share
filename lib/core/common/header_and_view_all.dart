@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 
 class HeaderAndViewAll extends StatelessWidget {
   final String headerTitle;
-  const HeaderAndViewAll({super.key, required this.headerTitle});
+  final String buttonText;
+  const HeaderAndViewAll(
+      {super.key, required this.headerTitle, this.buttonText = "View all >"});
 
   @override
   Widget build(BuildContext context) {
@@ -20,9 +22,9 @@ class HeaderAndViewAll extends StatelessWidget {
                 ),
                 GestureDetector(
                   onTap: () {
-                    print("view all pressed");
+                    print("$buttonText pressed");
                   },
-                  child: Text("View all >", style: MyInterFont.interRegular14),
+                  child: Text(buttonText, style: MyInterFont.interRegular14),
                 )
               ],
             )
@@ -36,9 +38,9 @@ class HeaderAndViewAll extends StatelessWidget {
                 ),
                 GestureDetector(
                   onTap: () {
-                    print("view all pressed");
+                    print("$buttonText pressed");
                   },
-                  child: Text("View all >", style: MyInterFont.interRegular14),
+                  child: Text(buttonText, style: MyInterFont.interRegular14),
                 )
               ],
             ),

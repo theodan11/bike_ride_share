@@ -1,3 +1,4 @@
+import 'package:bike_ride_ui/core/screens/care/care_screen.dart';
 import 'package:bike_ride_ui/core/screens/home/home_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -13,14 +14,18 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Bike Ride Sharing App',
       theme: ThemeData(
         colorScheme: const ColorScheme.light(
           primary: Color(0xFF584CF4),
         ),
         useMaterial3: true,
       ),
-      home: HomePage(),
+      initialRoute: '/care',
+      routes: {
+        '/home': (context) => const HomePage(),
+        '/care': (context) => CarePage(),
+      },
     );
   }
 }
