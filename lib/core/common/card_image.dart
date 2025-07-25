@@ -3,12 +3,16 @@ import 'package:flutter/material.dart';
 class CardImage extends StatelessWidget {
   final String imagePath;
   final double mHeight;
-  const CardImage({super.key, required this.imagePath, this.mHeight = 140});
+  const CardImage({
+    super.key,
+    required this.imagePath,
+    this.mHeight = 140,
+  });
 
   @override
   Widget build(BuildContext context) {
     return ConstrainedBox(
-      constraints: BoxConstraints(maxHeight: mHeight),
+      constraints: BoxConstraints(maxHeight: mHeight, minHeight: mHeight),
       child: ClipRRect(
         borderRadius: const BorderRadius.all(
           Radius.circular(4),
