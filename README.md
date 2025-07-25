@@ -16,7 +16,7 @@ This project is a User Interface (UI) conversion of a Bike Ride Sharing applicat
 
 ## A Quick Demo of the Project
 
-<img src="./gitAssets/video.gif" width="300"/>
+<img src="./gitAssets/video1.gif" width="300"/>
 
 
 
