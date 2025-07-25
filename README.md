@@ -1,16 +1,25 @@
-# bike_ride_ui
+# Bike Ride Sharing App UI
 
-A new Flutter project.
+![Home Page](./gitAssets/homePage.png)
 
-## Getting Started
+## About the project
 
-This project is a starting point for a Flutter application.
+This project is a User Interface (UI) conversion of a Bike Ride Sharing application user interface(UI) based on figma design. It purely focuses on frontend UI part of the application using flutter. 
 
-A few resources to get you started if this is your first Flutter project:
+## Comparison Between the Design and the Project
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### Home Page
+![Home Page](./gitAssets/homePageCom.png)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Care Page
+![Care Page](./gitAssets/carePageCom.png)
+
+## A Quick Demo of the Project
+
+<img src="./gitAssets/video.gif" width="300"/>
+
+
+
+## Resources 
+
+&rarr; ![Figma Design]()
