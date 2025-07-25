@@ -13,32 +13,40 @@ class CardWithTitle extends StatelessWidget {
         padding: const EdgeInsets.only(right: 8.5),
         child: ConstrainedBox(
           constraints: const BoxConstraints(maxWidth: 260),
-          child: Stack(children: [
-            Column(
-              children: [
-                Image.asset(
-                  'assets/images/up_e_01.png',
-                  width: MediaQuery.of(context).size.width / 3 - (32 / 3),
-                ),
-                Text(
-                  "Shimla to Manali",
-                  style: MyInterFont.interRegular14
-                      .copyWith(height: 2.4, color: ColorConstants.textGray),
-                ),
-              ],
-            ),
-            ListView.builder(
-                itemCount: 3,
-                itemBuilder: (context, index) {
-                  return Positioned(
-                    right: (index * 2 + 5),
-                    bottom: 6,
-                    child: ClipOval(
-                      child: Image.asset('/assets/images/Ellipse 40.png'),
-                    ),
-                  );
-                }),
-          ]),
+          child: Column(
+            children: [
+              Stack(
+                children: [
+                  Image.asset(
+                    'assets/images/up_e_01.png',
+                    width: MediaQuery.of(context).size.width / 3 - (32 / 3),
+                  ),
+                  ListView.builder(
+                    itemCount: 3,
+                    scrollDirection: Axis.horizontal,
+                    itemBuilder: (context, index) {
+                      return Positioned(
+                        left: 5,
+                        bottom: 5,
+                        child: ClipOval(
+                          child: Image.asset(
+                            'assets/images/Ellipse 40.png',
+                            width: 28,
+                            height: 28,
+                          ),
+                        ),
+                      );
+                    },
+                  ),
+                ],
+              ),
+              Text(
+                "Shimla to Manali",
+                style: MyInterFont.interRegular14
+                    .copyWith(height: 2.4, color: ColorConstants.textGray),
+              ),
+            ],
+          ),
         ),
       ),
     );
