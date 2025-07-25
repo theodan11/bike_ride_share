@@ -3,7 +3,7 @@ import 'package:bike_ride_ui/core/theme/my_inter_font.dart';
 import 'package:flutter/material.dart';
 
 class CardWithTitle extends StatelessWidget {
-  const CardWithTitle({super.key});
+  CardWithTitle({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -21,22 +21,58 @@ class CardWithTitle extends StatelessWidget {
                     'assets/images/up_e_01.png',
                     width: MediaQuery.of(context).size.width / 3 - (32 / 3),
                   ),
-                  ListView.builder(
-                    itemCount: 3,
-                    scrollDirection: Axis.horizontal,
-                    itemBuilder: (context, index) {
-                      return Positioned(
-                        left: 5,
-                        bottom: 5,
-                        child: ClipOval(
-                          child: Image.asset(
-                            'assets/images/Ellipse 40.png',
-                            width: 28,
-                            height: 28,
+                  Positioned(
+                    left: 5,
+                    bottom: 5,
+                    child: ClipOval(
+                      child: Image.asset(
+                        'assets/images/Ellipse 40.png',
+                        width: 28,
+                        height: 28,
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    left: 22,
+                    bottom: 5,
+                    child: ClipOval(
+                      child: Image.asset(
+                        'assets/images/Ellipse 40.png',
+                        width: 28,
+                        height: 28,
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    left: 39,
+                    bottom: 5,
+                    child: ClipOval(
+                      child: Image.asset(
+                        'assets/images/Ellipse 40.png',
+                        width: 28,
+                        height: 28,
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    left: 56,
+                    bottom: 5,
+                    child: ClipOval(
+                      child: Container(
+                        width: 28,
+                        height: 28,
+                        decoration: const BoxDecoration(
+                          color: ColorConstants.primaryPurple,
+                        ),
+                        child: Center(
+                          child: Text(
+                            "20+",
+                            style: MyInterFont.interRegularOffer12
+                                .copyWith(color: Colors.white),
                           ),
                         ),
-                      );
-                    },
+                      ),
+                    ),
                   ),
                 ],
               ),
