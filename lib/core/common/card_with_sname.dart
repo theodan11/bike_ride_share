@@ -1,9 +1,18 @@
+import 'package:bike_ride_ui/core/common/card_image.dart';
+import 'package:bike_ride_ui/core/common/card_text.dart';
 import 'package:bike_ride_ui/core/constant/color_constants.dart';
 import 'package:bike_ride_ui/core/theme/my_inter_font.dart';
 import 'package:flutter/material.dart';
 
 class CardWithTitle extends StatelessWidget {
-  CardWithTitle({super.key});
+  final String imagepath;
+  final String placeName;
+  final int numberOfUser;
+  const CardWithTitle(
+      {super.key,
+      required this.placeName,
+      required this.imagepath,
+      required this.numberOfUser});
 
   @override
   Widget build(BuildContext context) {
@@ -12,15 +21,12 @@ class CardWithTitle extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.only(right: 8.5),
         child: ConstrainedBox(
-          constraints: const BoxConstraints(maxWidth: 260),
+          constraints: const BoxConstraints(maxWidth: 260, minWidth: 90),
           child: Column(
             children: [
               Stack(
                 children: [
-                  Image.asset(
-                    'assets/images/up_e_01.png',
-                    width: MediaQuery.of(context).size.width / 3 - (32 / 3),
-                  ),
+                  CardImage(imagePath: imagepath),
                   Positioned(
                     left: 5,
                     bottom: 5,
@@ -66,7 +72,7 @@ class CardWithTitle extends StatelessWidget {
                         ),
                         child: Center(
                           child: Text(
-                            "20+",
+                            "$numberOfUser+",
                             style: MyInterFont.interRegularOffer12
                                 .copyWith(color: Colors.white),
                           ),
@@ -76,11 +82,7 @@ class CardWithTitle extends StatelessWidget {
                   ),
                 ],
               ),
-              Text(
-                "Shimla to Manali",
-                style: MyInterFont.interRegular14
-                    .copyWith(height: 2.4, color: ColorConstants.textGray),
-              ),
+              CardText(titleText: placeName),
             ],
           ),
         ),

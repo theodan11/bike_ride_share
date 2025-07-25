@@ -1,5 +1,6 @@
 import 'package:bike_ride_ui/core/common/card_with_image.dart';
 import 'package:bike_ride_ui/core/common/card_with_sname.dart';
+import 'package:bike_ride_ui/core/common/card_with_sname_list_builder.dart';
 import 'package:bike_ride_ui/core/common/header_and_view_all.dart';
 import 'package:bike_ride_ui/core/common/my_appbar_icons.dart';
 import 'package:bike_ride_ui/core/common/nearby_users.dart';
@@ -74,13 +75,7 @@ class HomePage extends StatelessWidget {
               Container(
                 padding: const EdgeInsets.only(left: 16),
                 height: 200,
-                child: ListView.builder(
-                  itemCount: 3,
-                  scrollDirection: Axis.horizontal,
-                  itemBuilder: (context, index) {
-                    return CardWithTitle();
-                  },
-                ),
+                child: CardWithSnameListBuilder(),
               )
             ],
           ),
